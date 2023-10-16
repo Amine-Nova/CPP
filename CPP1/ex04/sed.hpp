@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   sed.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/11 18:33:10 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/13 12:28:15 by abenmous         ###   ########.fr       */
+/*   Created: 2023/10/14 16:40:10 by abenmous          #+#    #+#             */
+/*   Updated: 2023/10/15 19:30:58 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include <string.h>
+#include <string>
+#include <fstream>
 
-class Zombie
-{
-    public:
-        void announce();
-        Zombie(const std::string);
-        Zombie();
-        ~Zombie();
-    private:
-		std::string name;
-};
-
-Zombie* zombieHorde(int N, std::string name);
+void write_file(std::string filename, std::string newv);
+std::string read_file(std::string filename);
+std::string replace_str(std::string file, std::string s1, std::string s2);

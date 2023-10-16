@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/11 18:33:10 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/13 12:28:15 by abenmous         ###   ########.fr       */
+/*   Created: 2023/10/16 15:11:28 by abenmous          #+#    #+#             */
+/*   Updated: 2023/10/16 15:47:57 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include"Harl.hpp"
 
-#include <iostream>
-#include <string.h>
-
-class Zombie
+void Harl::complain(std::string level)
 {
-    public:
-        void announce();
-        Zombie(const std::string);
-        Zombie();
-        ~Zombie();
-    private:
-		std::string name;
-};
+    int i = 0;
+    std::string func[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+    void (Harl::*fun_ptr[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+    while (i < 4)
+    {
+        if (level == func[i])
+           (this->*fun_ptr[i])();
+        i++;
+    }
+}
 
-Zombie* zombieHorde(int N, std::string name);
+Harl::Harl()
+{
+}
+
+Harl::~Harl()
+{
+}

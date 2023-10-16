@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/11 18:33:10 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/13 12:28:15 by abenmous         ###   ########.fr       */
+/*   Created: 2023/10/12 20:15:43 by abenmous          #+#    #+#             */
+/*   Updated: 2023/10/14 16:49:38 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "HumanB.hpp"
 
-#include <iostream>
-#include <string.h>
-
-class Zombie
+void HumanB::attack()
 {
-    public:
-        void announce();
-        Zombie(const std::string);
-        Zombie();
-        ~Zombie();
-    private:
-		std::string name;
-};
+    std::cout << name << " attacks with their " << BW->getType() << std::endl;
+}
 
-Zombie* zombieHorde(int N, std::string name);
+void HumanB::setWeapon(Weapon wepon)
+{
+    BW = &wepon;
+}
+
+HumanB::HumanB(const std::string smiya)
+{
+    BW = NULL;
+    name = smiya;
+}
+HumanB::HumanB()
+{
+}
+
+HumanB::~HumanB()
+{
+}
