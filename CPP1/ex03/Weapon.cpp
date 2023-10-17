@@ -6,15 +6,15 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 20:15:51 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/14 16:50:24 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/17 17:56:24 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-Weapon::Weapon(const std::string)
+Weapon::Weapon(const std::string t)
 {
-    type = "Sword";
+    type = t;
 }
 Weapon::Weapon()
 {

@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 20:15:43 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/14 16:49:38 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/17 18:06:06 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void HumanB::attack()
     std::cout << name << " attacks with their " << BW->getType() << std::endl;
 }
 
-void HumanB::setWeapon(Weapon wepon)
+void HumanB::setWeapon(Weapon &wepon)
 {
     BW = &wepon;
 }

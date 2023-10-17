@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:28:24 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/11 18:26:28 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/17 17:23:16 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 int main()
 {
-	Zombie *z;
-
-	z = newZombie("Amine");
-	z->announce();
-	delete(z);
+	Zombie Amine;
+	Amine.announce();
 }

@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:26:47 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/11 21:45:12 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/17 17:07:30 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ Zombie::Zombie(const std::string zz)
 }
 Zombie::~Zombie()
 {
-    std::cout << "The Zombie " << name <<  " has been Delete" << std::endl;
+    std::cout << "The Zombie " << name <<  " has been Deleted" << std::endl;
 }
