@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 16:40:59 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/17 21:49:39 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/18 12:53:50 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,11 @@ std::string read_file(std::string filename)
             ret.append(line + "\n");
         ret.pop_back();
         File.close();
+    }
+    else
+    {
+		std::cout << "File Error" << std::endl;
+        exit(1);
     }
     return(ret);
 }
