@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 16:41:13 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/16 15:10:33 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/18 15:19:56 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main(int ac, char **av)
 		else if (i >= 0 && (s1 != s2))
 		{
 			temp = replace_str(file, s1, s2);
-			i = file.find(s1, 0);
+			i = file.find(s1, i + 1);
 			while (i >= 0)
 			{
 				temp = replace_str(temp, s1, s2);

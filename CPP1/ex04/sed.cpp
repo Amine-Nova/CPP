@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 16:40:59 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/18 12:53:50 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/18 13:59:41 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ std::string read_file(std::string filename)
     else
     {
 		std::cout << "File Error" << std::endl;
-        exit(1);
+        exit (1);
     }
     return(ret);
 }
