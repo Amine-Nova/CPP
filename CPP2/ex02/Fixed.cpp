@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/22 19:57:52 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/25 18:13:45 by abenmous         ###   ########.fr       */
+/*   Created: 2023/10/25 16:41:49 by abenmous          #+#    #+#             */
+/*   Updated: 2023/10/25 18:48:35 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 Fixed::Fixed()
 {
-	std::cout << "Default constructor called" << std::endl;
     fp = 0;
+}
+Fixed::Fixed(const Fixed &a)
+{
+    *this = a;
 }
 Fixed::Fixed(const int i)
 {
-	std::cout << "Int constructor called" << std::endl;
     std::string bin, set;
     int j = 0, n = i, d = 0;
 
@@ -54,22 +56,53 @@ Fixed::Fixed(const int i)
 }
 Fixed::Fixed(const float f)
 {
-	std::cout << "Float constructor called" << std::endl;
     float i = f;
     i = roundf(i * pow(2, fb));
     fp = i;
 }
-Fixed::Fixed(const Fixed &a)
-{
-	std::cout << "Copy constructor called" << std::endl;
-	*this = a;
-}
 Fixed &Fixed::operator=(const Fixed &a)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &a)
 		fp = a.getRawBits();
 	return *this;
+}
+Fixed Fixed::operator+(const Fixed &a)
+{
+    return(Fixed(this->toFloat() + a.toFloat()));
+}
+Fixed Fixed::operator-(const Fixed &a)
+{
+    return(Fixed(this->toFloat() - a.toFloat()));
+}
+Fixed Fixed::operator*(const Fixed &a)
+{
+    return(Fixed(this->toFloat() * a.toFloat()));
+}
+Fixed Fixed::operator/(const Fixed &a)
+{
+    return(Fixed(this->toFloat() / a.toFloat()));
+}
+Fixed &Fixed::operator++()
+{
+    this->fp++;// pre-increment
+    return (*this);
+}
+Fixed &Fixed::operator--()
+{
+    this->fp--;// pre-decrement
+    return (*this);
+}
+Fixed Fixed::operator++(int)
+{
+    Fixed temp = *this;
+    fp++;// post-increment
+    return (temp);
+}
+Fixed Fixed::operator--(int)
+{
+    Fixed temp = *this;
+    fp--;// post-decrement
+    return (temp);
 }
 float Fixed::toFloat(void) const
 {
@@ -81,6 +114,11 @@ int Fixed::toInt(void) const
     i = i >> fb;
     return(i);
 }
+std::ostream& operator<<(std::ostream& out, const Fixed& a)
+{
+    out << a.toFloat();
+    return out;
+}
 int Fixed::getRawBits(void) const
 {
 	return (this->fp);
@@ -89,13 +127,6 @@ void Fixed::setRawBits(int const raw)
 {
 	fp = raw;
 }
-
-std::ostream& operator<<(std::ostream& out, const Fixed& a)
-{
-    out << a.toFloat();
-    return out;
-}
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 17:35:00 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/22 19:25:29 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/25 18:13:52 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Fixed::Fixed()
 {
-    fp = 0;
 	std::cout << "Default constructor called" << std::endl;
+    fp = 0;
 }
 
 Fixed::Fixed(const Fixed &a)

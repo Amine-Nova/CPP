@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/22 19:53:01 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/23 23:00:18 by abenmous         ###   ########.fr       */
+/*   Created: 2023/10/25 16:41:47 by abenmous          #+#    #+#             */
+/*   Updated: 2023/10/25 18:47:57 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,27 @@ public:
     Fixed();
     Fixed(const int i);
     Fixed(const float f);
-    Fixed(const Fixed &a); // Copy Constractur
-    Fixed &operator=(const Fixed &a); // Copy assignment operator
-    ~Fixed(); // Destructor
-	float toFloat(void) const;
-	int toInt(void) const;	
+    Fixed(const Fixed &a);
+    Fixed &operator=(const Fixed &a);
+    Fixed &operator>(const Fixed &a);
+    Fixed &operator<(const Fixed &a);
+    Fixed &operator>=(const Fixed &a);
+    Fixed &operator<=(const Fixed &a);
+    Fixed &operator==(const Fixed &a);
+    Fixed &operator!=(const Fixed &a);
+    Fixed operator+(const Fixed &a);
+    Fixed operator-(const Fixed &a);
+    Fixed operator*(const Fixed &a);
+    Fixed operator/(const Fixed &a);
+    Fixed &operator++();
+    Fixed &operator--();
+    Fixed operator++(int);
+    Fixed operator--(int);
+    float toFloat(void) const;
+    int toInt(void) const;
+    ~Fixed();
     int getRawBits(void) const;
 	void setRawBits(int const raw);
 };
-std::ostream& operator<<(std::ostream&, const Fixed&);
+
+std::ostream& operator<<(std::ostream& out, const Fixed& a);
