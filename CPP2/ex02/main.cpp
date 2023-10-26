@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 16:41:51 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/25 18:49:20 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/26 11:37:24 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int main( void )
     std::cout << a++ << std::endl;
     std::cout << a << std::endl;
     std::cout << b << std::endl;
-    // std::cout << Fixed::max( a, b ) << std::endl;
-    // return 0;
+    std::cout << Fixed::max( a, b ) << std::endl;
+    return 0;
 }
