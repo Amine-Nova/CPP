@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 17:18:26 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/27 17:36:02 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/27 17:42:37 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ FragTrap &FragTrap::operator=(const FragTrap &a)
 }
 void FragTrap::highFivesGuys(void)
 {
-    std::cout << "FragTrap : Up top for a high-five!" << std::endl;
+    std::cout << "FragTrap : \"Up top for a high-five!\"" << std::endl;
 }
 FragTrap::~FragTrap()
 {

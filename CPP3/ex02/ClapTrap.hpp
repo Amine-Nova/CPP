@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 08:36:49 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/27 16:50:34 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/27 19:28:52 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ protected:
     int Ad;
 public:
     ClapTrap();
-    ClapTrap(std::string name);
+    ClapTrap(std::string Shield);
     ClapTrap(const ClapTrap &a); // Copy Constractur
     ClapTrap &operator=(const ClapTrap &a); // Copy assignment operator
     void attack(const std::string& target);
