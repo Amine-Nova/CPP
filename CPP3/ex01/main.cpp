@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 08:36:53 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/27 17:09:13 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/28 20:05:21 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int main()
 {
     ClapTrap a("Thor");
     ScavTrap b("Loki");
-
     a.attack("Gorr");
     b.attack("Kang");
     b.guardGate();
