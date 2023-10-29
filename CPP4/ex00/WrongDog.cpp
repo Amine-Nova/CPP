@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 12:18:54 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/29 12:52:08 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/29 13:24:26 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 WrongDog::WrongDog()
 {
+    std::cout << "WrongDog Constractor : \"Geia!\"" << std::endl;
     type = "Dog";
 }
 WrongDog::WrongDog(const WrongDog &a)
@@ -40,5 +41,5 @@ void WrongDog::setType(std::string const ss)
 }
 WrongDog::~WrongDog()
 {
-    
+    std::cout << "WrongDog Destractor : \"Anito!\"" << std::endl;    
 }

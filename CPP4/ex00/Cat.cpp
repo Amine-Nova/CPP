@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 10:11:58 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/29 12:14:51 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/29 13:05:51 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Cat::Cat()
 {
+    std::cout << "Cat Constractor : \"Hola!\"" << std::endl;
     type = "Cat";
 }
 Cat::Cat(const Cat &a)
@@ -40,4 +41,5 @@ void Cat::makeSound() const
 }
 Cat::~Cat()
 {
+    std::cout << "Cat Destractor : \"Adios!\"" << std::endl;
 }

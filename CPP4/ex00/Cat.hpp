@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 10:12:00 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/29 11:09:56 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/29 13:16:41 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ public:
     void makeSound() const;
     std::string getType() const;
     void setType(std::string const ss);
-    ~Cat();
+    virtual ~Cat();
 };

@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 10:12:02 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/29 12:15:02 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/29 13:06:48 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Dog::Dog()
 {
+    std::cout << "Dog Constractor : \"Salut!\"" << std::endl;
     type = "Dog";
 }
 Dog::Dog(const Dog &a)
@@ -40,4 +41,5 @@ void Dog::makeSound() const
 }
 Dog::~Dog()
 {
+    std::cout << "Dog Destractor : \"Au Revoir!\"" << std::endl;
 }

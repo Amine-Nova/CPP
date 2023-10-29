@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 12:18:48 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/29 12:52:13 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/29 13:09:02 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 WrongAnimal::WrongAnimal()
 {
+    std::cout << "WrongAnimal Constractor : \"Ciao!\"" << std::endl;
     type = "DefaultAnimal";
 }
 WrongAnimal::WrongAnimal(const WrongAnimal &a)
@@ -40,4 +41,5 @@ void WrongAnimal::setType(std::string const ss)
 }
 WrongAnimal::~WrongAnimal()
 {
+    std::cout << "WrongAnimal Destractor : \"Ciao!\"" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 10:11:52 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/29 11:09:43 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/29 13:02:33 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Animal::Animal()
 {
+    std::cout << "Animal Constractor : \"Hello!\"" << std::endl;
     type = "Default";
 }
 Animal::Animal(const Animal &a)
@@ -42,4 +43,5 @@ void Animal::makeSound() const
 
 Animal::~Animal()
 {
+    std::cout << "Animal Destractor : \"Good Bye\"" << std::endl;
 }
