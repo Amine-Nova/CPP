@@ -1,45 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongDog.cpp                                       :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/29 12:18:54 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/31 16:17:59 by abenmous         ###   ########.fr       */
+/*   Created: 2023/10/29 10:11:52 by abenmous          #+#    #+#             */
+/*   Updated: 2023/10/29 13:02:33 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"WrongDog.hpp"
+#include"Animal.hpp"
 
-WrongDog::WrongDog()
+Animal::Animal()
 {
-    std::cout << "WrongDog Constractor : \"Geia!\"" << std::endl;
-    type = "Dog";
+    std::cout << "Animal Constractor : \"Hello!\"" << std::endl;
+    type = "Default";
 }
-WrongDog::WrongDog(const WrongDog &a)
+Animal::Animal(const Animal &a)
 {
     *this = a;
 }
-WrongDog &WrongDog::operator=(const WrongDog &a)
+Animal &Animal::operator=(const Animal &a)
 {
     if (this != &a)
         this->type = a.type;
     return (*this);
 }
-void WrongDog::makeSound() const
+
+std::string Animal::getType() const
 {
-    std::cout << "Bark" << std::endl;
+    return(this->type);
 }
-std::string WrongDog::getType() const
-{
-    return(this->type); 
-}
-void WrongDog::setType(std::string const ss)
+void Animal::setType(std::string const ss)
 {
     this->type = ss;
 }
-WrongDog::~WrongDog()
+void Animal::makeSound() const
 {
-    std::cout << "WrongDog Destractor : \"Anito!\"" << std::endl;    
+    std::cout << "Default" << std::endl;
+}
+
+Animal::~Animal()
+{
+    std::cout << "Animal Destractor : \"Good Bye\"" << std::endl;
 }

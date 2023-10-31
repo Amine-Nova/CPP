@@ -1,45 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongDog.cpp                                       :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/29 12:18:54 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/31 16:17:59 by abenmous         ###   ########.fr       */
+/*   Created: 2023/10/29 10:11:58 by abenmous          #+#    #+#             */
+/*   Updated: 2023/10/31 16:35:18 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"WrongDog.hpp"
+#include"Cat.hpp"
 
-WrongDog::WrongDog()
+Cat::Cat()
 {
-    std::cout << "WrongDog Constractor : \"Geia!\"" << std::endl;
-    type = "Dog";
+    std::cout << "Cat Constractor : \"Hola!\"" << std::endl;
+    type = "Cat";
+    Bcat = new Brain();
 }
-WrongDog::WrongDog(const WrongDog &a)
+Cat::Cat(const Cat &a)
 {
     *this = a;
 }
-WrongDog &WrongDog::operator=(const WrongDog &a)
+Cat &Cat::operator=(const Cat &a)
 {
     if (this != &a)
         this->type = a.type;
     return (*this);
 }
-void WrongDog::makeSound() const
+std::string Cat::getType() const
 {
-    std::cout << "Bark" << std::endl;
+    return(this->type);
 }
-std::string WrongDog::getType() const
-{
-    return(this->type); 
-}
-void WrongDog::setType(std::string const ss)
+void Cat::setType(std::string const ss)
 {
     this->type = ss;
 }
-WrongDog::~WrongDog()
+void Cat::makeSound() const
 {
-    std::cout << "WrongDog Destractor : \"Anito!\"" << std::endl;    
+    std::cout << "Meow" << std::endl;
+}
+Cat::~Cat()
+{
+    std::cout << "Cat Destractor : \"Adios!\"" << std::endl;
+    delete Bcat;
 }

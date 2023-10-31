@@ -1,45 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongDog.cpp                                       :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/29 12:18:54 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/31 16:17:59 by abenmous         ###   ########.fr       */
+/*   Created: 2023/10/29 10:12:02 by abenmous          #+#    #+#             */
+/*   Updated: 2023/10/31 16:34:59 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"WrongDog.hpp"
+#include"Dog.hpp"
 
-WrongDog::WrongDog()
+Dog::Dog()
 {
-    std::cout << "WrongDog Constractor : \"Geia!\"" << std::endl;
+    std::cout << "Dog Constractor : \"Salut!\"" << std::endl;
     type = "Dog";
+    Bdog = new Brain();
 }
-WrongDog::WrongDog(const WrongDog &a)
+Dog::Dog(const Dog &a)
 {
     *this = a;
 }
-WrongDog &WrongDog::operator=(const WrongDog &a)
+Dog &Dog::operator=(const Dog &a)
 {
     if (this != &a)
         this->type = a.type;
     return (*this);
 }
-void WrongDog::makeSound() const
+std::string Dog::getType() const
 {
-    std::cout << "Bark" << std::endl;
+    return(this->type);
 }
-std::string WrongDog::getType() const
-{
-    return(this->type); 
-}
-void WrongDog::setType(std::string const ss)
+void Dog::setType(std::string const ss)
 {
     this->type = ss;
 }
-WrongDog::~WrongDog()
+void Dog::makeSound() const
 {
-    std::cout << "WrongDog Destractor : \"Anito!\"" << std::endl;    
+    std::cout << "Bark" << std::endl;
+}
+Dog::~Dog()
+{
+    std::cout << "Dog Destractor : \"Au Revoir!\"" << std::endl;
+    delete Bdog;
 }

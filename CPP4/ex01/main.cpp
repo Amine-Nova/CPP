@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 10:12:06 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/31 17:20:07 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/10/31 17:15:25 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,31 +17,22 @@
 
 int main()
 {
-const Animal* meta = new Animal();
-const Animal* j = new Dog();
-const Animal* i = new Cat();
-std::cout << j->getType() << " " << std::endl;
-std::cout << i->getType() << " " << std::endl;
-i->makeSound();
-j->makeSound();
-meta->makeSound();
+    int i = 10, j = 0;
+    Animal *A[10];
 
-delete meta;
-delete j;
-delete i;
-
-std::cout << "--------------" << std::endl;
-const WrongAnimal* Wrongmeta = new WrongAnimal();
-const WrongAnimal* Wrongj = new WrongDog();
-const WrongAnimal* Wrongi = new WrongCat();
-std::cout << Wrongj->getType() << " " << std::endl;
-std::cout << Wrongi->getType() << " " << std::endl;
-Wrongi->makeSound();
-Wrongj->makeSound();
-Wrongmeta->makeSound();
-
-delete Wrongmeta;
-delete Wrongj;
-delete Wrongi;
-return 0;
+    while(j < i)
+    {
+        if (j % 2)
+            A[j] = new Dog();
+        else
+            A[j] = new Cat();
+        j++;
+    }
+    j = 0;
+    while(j < i)
+    {
+        delete A[j];
+        j++;
+    }
+    return 0;
 }
