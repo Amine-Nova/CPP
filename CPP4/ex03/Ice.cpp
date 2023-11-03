@@ -1,32 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/29 10:11:54 by abenmous          #+#    #+#             */
-/*   Updated: 2023/11/01 16:29:14 by abenmous         ###   ########.fr       */
+/*   Created: 2023/11/02 16:58:47 by abenmous          #+#    #+#             */
+/*   Updated: 2023/11/02 17:35:50 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include"Ice.hpp"
 
-#include<iostream>
-#include<string>
-
-class Animal
+Ice::Ice()
 {
-protected:
-    std::string type;
-public:
-    Animal();
-    Animal(const Animal &a);
-    Animal &operator=(const Animal &a);
-    virtual void makeSound() const;
-    virtual std::string getType() const;
-    virtual void setType(std::string const ss);
-    virtual ~Animal();
-};
-
-
+    type = "ice";
+}
+Ice::Ice(const Ice &a)
+{
+    *this = a;
+}
+Ice &Ice::operator=(const Ice &a)
+{
+    if (this != &a)
+        this->type = a.type;
+    return (*this);
+}
+std::string Ice::getType() const
+{
+    return(this->type);
+}
+void Ice::setType(std::string const ss)
+{
+    this->type = ss;
+}
+AMateria* Ice::clone() const
+{
+    AMateria *I = new Ice();
+}
+Ice::~Ice()
+{
+}
