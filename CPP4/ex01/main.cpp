@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 10:12:06 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/31 17:34:29 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/11/05 15:25:47 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main()
     const Animal* j = new Dog();
     const Animal* i = new Cat();
 
-    delete j;//should not create a leak
+    delete j;
     delete i;
     std::cout << "-------------------------------------" << std::endl;
     int a = 10, b = 0;

@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:46:28 by abenmous          #+#    #+#             */
-/*   Updated: 2023/11/02 17:33:29 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/11/04 22:36:25 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,10 @@ void AMateria::setType(std::string const ss)
 {
 	this->type = ss;
 }
-AMateria* AMateria::clone() const
-{
-	AMateria *a;
-	return(a);
-}
+
 void AMateria::use(ICharacter& target)
 {
-
+    std::cout << target.getName() << "It D'ont be Used" << std::endl;
 }
 AMateria::~AMateria()
 {

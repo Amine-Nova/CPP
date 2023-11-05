@@ -1,6 +1,6 @@
-NAME = Third
+NAME = Fourth
 
-SRC = main.cpp AMateria.cpp
+SRC = main.cpp AMateria.cpp Cure.cpp Ice.cpp Character.cpp MateriaSource.cpp
 
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 

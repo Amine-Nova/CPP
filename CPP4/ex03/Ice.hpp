@@ -6,9 +6,11 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:58:54 by abenmous          #+#    #+#             */
-/*   Updated: 2023/11/02 18:00:50 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/11/04 22:30:43 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#pragma once
 
 #include"AMateria.hpp"
 
