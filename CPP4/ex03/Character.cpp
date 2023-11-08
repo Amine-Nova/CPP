@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:41:42 by abenmous          #+#    #+#             */
-/*   Updated: 2023/11/05 14:13:54 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/11/05 21:36:54 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@ Character::Character(std::string ss)
 Character::Character(const Character &a)
 {
     *this = a;
+    for(int i=0; i < 4; i++)
+    {
+        e[i] = a.e[i];
+    }
+    ue = a.ue;
 }
 Character &Character::operator=(const Character &a)
 {

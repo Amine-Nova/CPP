@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 10:12:02 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/31 16:34:59 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/11/05 17:19:53 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,12 @@ Dog::Dog(const Dog &a)
 Dog &Dog::operator=(const Dog &a)
 {
     if (this != &a)
+    {
+        if (Bdog)
+            Bdog = NULL;
         this->type = a.type;
+    }
     return (*this);
-}
-std::string Dog::getType() const
-{
-    return(this->type);
-}
-void Dog::setType(std::string const ss)
-{
-    this->type = ss;
 }
 void Dog::makeSound() const
 {

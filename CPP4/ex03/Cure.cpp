@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:56:21 by abenmous          #+#    #+#             */
-/*   Updated: 2023/11/03 17:07:33 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/11/08 19:08:17 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,6 @@ Cure &Cure::operator=(const Cure &a)
     if (this != &a)
         this->type = a.type;
     return (*this);
-}
-std::string Cure::getType() const
-{
-    return(this->type);
-}
-void Cure::setType(std::string const ss)
-{
-    this->type = ss;
 }
 
 void Cure::use(ICharacter& target)

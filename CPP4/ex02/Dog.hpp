@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 11:03:11 by abenmous          #+#    #+#             */
-/*   Updated: 2023/11/03 20:43:44 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/11/05 17:21:14 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,11 @@
 class Dog : public Animal
 {
 private:
-    std::string type;
     Brain *Bdog;
 public:
     Dog();
     Dog(const Dog &a);
     Dog &operator=(const Dog &a);
     void makeSound() const;
-    std::string getType() const;
-    void setType(std::string const ss);
     ~Dog();
 };

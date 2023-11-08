@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 10:11:58 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/29 13:05:51 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/11/05 17:18:47 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,6 @@ Cat &Cat::operator=(const Cat &a)
     if (this != &a)
         this->type = a.type;
     return (*this);
-}
-std::string Cat::getType() const
-{
-    return(this->type);
-}
-void Cat::setType(std::string const ss)
-{
-    this->type = ss;
 }
 void Cat::makeSound() const
 {

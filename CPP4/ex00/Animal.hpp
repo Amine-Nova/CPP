@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 10:11:54 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/29 11:09:33 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/11/05 17:18:18 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ public:
     Animal(const Animal &a);
     Animal &operator=(const Animal &a);
     virtual void makeSound() const;
-    virtual std::string getType() const;
-    virtual void setType(std::string const ss);
+    std::string getType() const;
+    void setType(std::string const ss);
     virtual ~Animal();
 };
 

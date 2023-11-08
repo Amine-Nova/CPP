@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 12:18:50 by abenmous          #+#    #+#             */
-/*   Updated: 2023/10/29 13:13:44 by abenmous         ###   ########.fr       */
+/*   Updated: 2023/11/05 17:19:19 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,6 @@ WrongCat &WrongCat::operator=(const WrongCat &a)
 void WrongCat::makeSound() const
 {
     std::cout << "Meow" << std::endl;
-}
-std::string WrongCat::getType() const
-{
-    return(this->type);
-}
-void WrongCat::setType(std::string const ss)
-{
-    this->type = ss;
 }
 WrongCat::~WrongCat()
 {
