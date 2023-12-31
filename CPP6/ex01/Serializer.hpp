@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/28 17:24:10 by abenmous          #+#    #+#             */
-/*   Updated: 2023/12/31 10:30:43 by abenmous         ###   ########.fr       */
+/*   Created: 2023/12/31 13:07:08 by abenmous          #+#    #+#             */
+/*   Updated: 2023/12/31 13:17:20 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ScalarConverter.hpp"
+#include<iostream>
 
-int main(int ac, char **av)
+typedef struct Data
 {
-    if (ac == 2)
-    {
-        ScalarConverter::convert(av[1]);
-    }
-}
+    
+};
+
+
+class Serializer
+{
+    private:
+        Serializer();
+    public:
+        static uintptr_t serialize(Data* ptr);
+        static Data* deserialize(uintptr_t raw);
+        ~Serializer();
+};

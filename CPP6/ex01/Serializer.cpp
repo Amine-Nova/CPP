@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Serializer.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/28 17:24:10 by abenmous          #+#    #+#             */
-/*   Updated: 2023/12/31 10:30:43 by abenmous         ###   ########.fr       */
+/*   Created: 2023/12/31 13:07:59 by abenmous          #+#    #+#             */
+/*   Updated: 2023/12/31 13:08:14 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ScalarConverter.hpp"
+#include"Serializer.hpp"
 
-int main(int ac, char **av)
+Serializer::Serializer()
 {
-    if (ac == 2)
-    {
-        ScalarConverter::convert(av[1]);
-    }
+}
+
+Serializer::~Serializer()
+{
 }
