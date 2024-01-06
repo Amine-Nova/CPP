@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 11:47:42 by abenmous          #+#    #+#             */
-/*   Updated: 2023/12/23 10:12:28 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/01/05 17:11:40 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,5 @@ class AForm
         virtual int gete_grade()const;
         virtual void  beSigned(Bureaucrat &cls);
         virtual void execute(Bureaucrat const & executor) const=0;
-        ~AForm();
+        virtual ~AForm();
 };

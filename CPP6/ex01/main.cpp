@@ -6,9 +6,15 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/31 13:06:54 by abenmous          #+#    #+#             */
-/*   Updated: 2023/12/31 13:07:05 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/01/05 11:29:09 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"Serializer.hpp"
 
+int main()
+{
+    Data s;
+
+    
+}

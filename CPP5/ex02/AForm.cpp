@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 15:10:43 by abenmous          #+#    #+#             */
-/*   Updated: 2023/12/23 10:12:35 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/01/05 17:06:27 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ AForm::AForm() : name("Default"), s_grade(1), e_grade(5)
 }
 AForm::AForm(const std::string n, const int s_g, const int e_g) : name(n), s_grade(s_g), e_grade(e_g)
 {
+    if (this->s_grade > 150)
+        throw GradeTooLowException();
+    if (this->s_grade < 1)
+        throw GradeTooHighException();
     indication = false;
 }
 
@@ -67,10 +71,8 @@ std::ostream &operator<<(std::ostream &output, AForm &obj)
 
 void  AForm::beSigned(Bureaucrat &cls)
 {
-    if (cls.getGrade() > s_grade || s_grade > 150)
+    if (cls.getGrade() > s_grade)
         throw GradeTooLowException();
-    else if (s_grade <= 0)
-        throw GradeTooHighException();
     else if (cls.getGrade() <= s_grade)
         indication = true;
 }

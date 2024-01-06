@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 12:19:32 by abenmous          #+#    #+#             */
-/*   Updated: 2023/12/19 15:13:50 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/01/05 09:52:42 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int main()
 {
-    Bureaucrat Amine("amine", 10);
+    Bureaucrat Amine("amine", 1);
     Form Ahmed("ahmed", 1, 5);
     Bureaucrat Said("said", 5);
-    Form Med("med", 3, 5);
+    Form Med("med", 12, 5);
     
     Amine.signForm(Ahmed);
     try

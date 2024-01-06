@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 16:25:31 by abenmous          #+#    #+#             */
-/*   Updated: 2023/12/31 11:44:49 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/01/04 12:06:32 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,15 @@ int count_afterv(std::string ptr, int i)
 
 int inf_nan(std::string input)
 {
-    if (!strcmp(input.c_str(), "+inf"))
+    if(!strcmp(input.c_str(), "inf"))
+    {
+        std::cout << "char : Non displayable" << std::endl;
+        std::cout << "int : Max Reached"  << std::endl;
+        std::cout << "float : inf"  <<"f" << std::endl;
+        std::cout << "double : inf" << std::endl;
+        return(0);
+    }
+    else if (!strcmp(input.c_str(), "+inf"))
     {
         std::cout << "char : Non displayable" << std::endl;
         std::cout << "int : Max Reached"  << std::endl;

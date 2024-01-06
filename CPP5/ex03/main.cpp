@@ -6,13 +6,13 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 12:19:32 by abenmous          #+#    #+#             */
-/*   Updated: 2023/12/31 14:04:43 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/01/05 17:13:11 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"Intern.hpp"
 
-int main2()
+int main()
 {
     Intern Amine;
     AForm* rrf;
@@ -52,4 +52,9 @@ int main2()
     {
         std::cerr << e.what() << '\n';
     }
+    delete rrf;
+    delete rrf1;
+    delete rrf2;
+    
+    return 0;
 }

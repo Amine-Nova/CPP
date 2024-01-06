@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 12:07:14 by abenmous          #+#    #+#             */
-/*   Updated: 2023/12/19 16:45:54 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/01/05 18:26:15 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,6 @@ Bureaucrat::Bureaucrat(const Bureaucrat &obj)
 {
     *this = obj;
 }
-
-Bureaucrat::Bureaucrat(const std::string n, int grade) : name(n)
-{
-    this->grade = grade;
-}
 const char *Bureaucrat::GradeTooHighException::what() const throw()
 {
     return ("Grade Too High");
@@ -33,6 +28,15 @@ const char *Bureaucrat::GradeTooHighException::what() const throw()
 const char *Bureaucrat::GradeTooLowException::what() const throw()
 {
     return ("Grade Too Low");
+}
+
+Bureaucrat::Bureaucrat(const std::string n, int grade) : name(n)
+{
+    this->grade = grade;
+    if (this->grade > 150)
+        throw GradeTooLowException();
+    if (this->grade < 1)
+        throw GradeTooHighException();
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &obj)

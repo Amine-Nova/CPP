@@ -6,11 +6,10 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 12:19:32 by abenmous          #+#    #+#             */
-/*   Updated: 2023/12/23 12:30:37 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/01/05 18:28:12 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Bureaucrat.hpp"
 #include"AForm.hpp"
 #include"PresidentialPardonForm.hpp"
 #include"ShrubberyCreationForm.hpp"
@@ -18,7 +17,7 @@
 
 int main()
 {
-    Bureaucrat Amine("Amine", 1);
+    Bureaucrat Amine("Amine", 2);
     ShrubberyCreationForm christmas("Christmas");
     RobotomyRequestForm robot("Robot");
     PresidentialPardonForm president("President");

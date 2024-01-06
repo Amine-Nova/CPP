@@ -6,12 +6,11 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 11:57:18 by abenmous          #+#    #+#             */
-/*   Updated: 2023/12/23 19:24:54 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/01/05 09:46:15 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"PresidentialPardonForm.hpp"
-#include"AForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm() : AForm()
 {

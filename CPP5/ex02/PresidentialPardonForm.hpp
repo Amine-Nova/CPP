@@ -6,12 +6,14 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 11:56:54 by abenmous          #+#    #+#             */
-/*   Updated: 2023/12/22 15:11:56 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/01/05 09:48:42 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include"AForm.hpp"
+
+class AForm;
 
 class PresidentialPardonForm : public AForm
 {
