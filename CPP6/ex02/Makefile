@@ -1,8 +1,8 @@
-NAME = convert
+NAME = Base
 
-FLAGS = -Wall -Werror -Wextra -std=c++98
+FLAGS = -Wall -Werror -Wextra -std=c++98 
 
-SRC = main.cpp ScalarConverter.cpp 
+SRC = main.cpp Base.cpp
 
 CC = c++
 
@@ -10,7 +10,7 @@ OBJ = ${SRC:.cpp=.o}
 
 all : $(NAME)
 
-%.o : %.cpp ScalarConverter.hpp
+%.o : %.cpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME) : $(OBJ)

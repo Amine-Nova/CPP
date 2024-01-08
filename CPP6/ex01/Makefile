@@ -1,6 +1,6 @@
 NAME = Serializer
 
-FLAGS = -Wall -Werror -Wextra -std=c++98
+FLAGS = -Wall -Werror -Wextra -std=c++98 
 
 SRC = main.cpp Serializer.cpp 
 
@@ -22,3 +22,5 @@ clean :
 fclean : clean
 	rm -rf $(NAME)
 re : fclean all
+
+.PHONY : all clean re fclean

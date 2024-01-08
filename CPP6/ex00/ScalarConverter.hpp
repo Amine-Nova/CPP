@@ -6,10 +6,11 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 16:13:29 by abenmous          #+#    #+#             */
-/*   Updated: 2023/12/31 10:31:50 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/01/07 15:44:59 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include<iostream>
 #include <sstream>
 #include <iomanip>
