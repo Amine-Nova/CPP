@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 16:23:55 by abenmous          #+#    #+#             */
-/*   Updated: 2024/01/08 15:23:43 by abenmous         ###   ########.fr       */
+/*   Created: 2024/01/08 16:57:27 by abenmous          #+#    #+#             */
+/*   Updated: 2024/01/09 14:54:29 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include"iter.hpp"
 
-#include"Animal.hpp"
-
-class Brain
+int main()
 {
-    private:
-    public:
-        std::string ideas[100];
-        Brain();
-        Brain(const Brain &a);
-        Brain &operator=(const Brain &a);
-        ~Brain();
-};
+    int i[3] = {4, 2, 5};
+    iter(i, 3, func);
+    int j = 0;
+    while(j < 3)
+        std::cout << i[j++] << std::endl;
+    return (0);
+}

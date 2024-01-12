@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 16:23:55 by abenmous          #+#    #+#             */
-/*   Updated: 2024/01/08 15:23:43 by abenmous         ###   ########.fr       */
+/*   Created: 2024/01/08 16:57:33 by abenmous          #+#    #+#             */
+/*   Updated: 2024/01/11 18:02:37 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#include <iostream>
 
-#include"Animal.hpp"
-
-class Brain
+template<typename T>
+void iter(T *a, int l, void (*f)(T*))
 {
-    private:
-    public:
-        std::string ideas[100];
-        Brain();
-        Brain(const Brain &a);
-        Brain &operator=(const Brain &a);
-        ~Brain();
-};
+    int i = 0;
+
+    while (i < l)
+        f(&a[i++]);
+}
+template<typename T>
+
+void func(T *s)
+{
+    *s = *s + 1;
+}

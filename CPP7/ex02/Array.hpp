@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 16:23:55 by abenmous          #+#    #+#             */
-/*   Updated: 2024/01/08 15:23:43 by abenmous         ###   ########.fr       */
+/*   Created: 2024/01/09 15:04:18 by abenmous          #+#    #+#             */
+/*   Updated: 2024/01/11 15:24:46 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#include<iostream>
+#include<exception>
 
-#include"Animal.hpp"
+template<class T>
 
-class Brain
+class Array
 {
     private:
+        T *typo;
+        unsigned int l;
     public:
-        std::string ideas[100];
-        Brain();
-        Brain(const Brain &a);
-        Brain &operator=(const Brain &a);
-        ~Brain();
+        Array();
+        Array(unsigned int a);
+        Array(const Array &o);
+        Array &operator=(const Array &obj);
+        T &operator[](unsigned int s);
+        ~Array();
 };
+#include"Array.tpp"
