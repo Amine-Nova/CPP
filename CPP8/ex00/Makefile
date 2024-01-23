@@ -1,16 +1,16 @@
-NAME = Array
+NAME= Find
 
-SRC = main.cpp
+SRCS= main.cpp
 
-CFLAGS = -Wall -Werror -Wextra -std=c++98
+CC= c++
 
-CC = c++
+CFLAGS= -Wall -Werror -Wextra -std=c++98
 
-OBJ = ${SRC:.cpp=.o}
+OBJ= ${SRCS:.cpp=.o}
 
 all : $(NAME)
 
-%.o : %.cpp Array.hpp 
+%.o : %.cpp easyfind.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME) : $(OBJ)
@@ -18,10 +18,11 @@ $(NAME) : $(OBJ)
 
 clean :
 	rm -rf $(OBJ)
-
 fclean : clean
 	rm -rf $(NAME)
 
 re : fclean all
 
 .PHONY : clean
+
+

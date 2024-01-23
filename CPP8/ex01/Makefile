@@ -1,24 +1,24 @@
-NAME = Array
+NAME = Span
 
-SRC = main.cpp
-
-CFLAGS = -Wall -Werror -Wextra -std=c++98
+SRCS = main.cpp Span.cpp
 
 CC = c++
 
-OBJ = ${SRC:.cpp=.o}
+FLAGS = -Wall -Werror -Wextra -std=c++98
+
+OBJ = ${SRCS:.cpp=.o}
+
 
 all : $(NAME)
 
-%.o : %.cpp Array.hpp 
+%.o : %.cpp Span.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $^ -o $@
 
-clean :
+clean : 
 	rm -rf $(OBJ)
-
 fclean : clean
 	rm -rf $(NAME)
 
