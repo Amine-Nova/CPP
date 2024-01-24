@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 12:32:42 by abenmous          #+#    #+#             */
-/*   Updated: 2024/01/18 17:19:27 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/01/24 14:19:06 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,17 @@ int main()
     try
     {
         Span sp(6);
-        sp.manyNumbers(0, 6);
-        Span a = sp;
-        std::cout << "a : " << a.shortestSpan() << std::endl;
+        std::vector<int> j;
+        j.push_back(18);
+        j.push_back(29);
+        j.push_back(451);
+        j.push_back(684);
+        j.push_back(45);
+        j.push_back(88);
+        j.push_back(123);
+        sp.manyNumbers(j.begin(), j.end());
         std::cout  << sp.shortestSpan() << std::endl;
         std::cout << sp.longestSpan() << std::endl; 
-        std::cout << "a : " << a.longestSpan() << std::endl;
     }
     catch(const std::exception& e)
     {

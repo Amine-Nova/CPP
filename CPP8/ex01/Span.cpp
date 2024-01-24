@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 12:33:00 by abenmous          #+#    #+#             */
-/*   Updated: 2024/01/22 10:15:13 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/01/24 14:18:26 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,17 +69,14 @@ int Span::shortestSpan()
     return (i);
 }
 
-void Span::manyNumbers(int start, int end)
+void Span::manyNumbers(iter start, iter end)
 {
-    if (N < 2 || end < start)
+    if (N < 2)
         throw std::logic_error("Logic Error");
-    for (int i = 0; i < N; i++)
+    for (int i = 0; i < N && start != end; i++)
     {
-        List.push_back(start);
-        std::cout << List[i] << std::endl;
-        start++;
-        if (start == end)
-            return ;
+        List.push_back(*start);
+        start++;        
     }
     return ;
 }

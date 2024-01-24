@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 17:11:07 by abenmous          #+#    #+#             */
-/*   Updated: 2024/01/20 14:49:34 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/01/24 14:07:11 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include<iostream>
 #include<vector>
 #include<iterator>
+#include<algorithm>
 
 template<typename T>
 void easyfind(T v, int value)

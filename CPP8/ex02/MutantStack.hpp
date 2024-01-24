@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 14:48:52 by abenmous          #+#    #+#             */
-/*   Updated: 2024/01/23 12:33:18 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/01/24 16:37:13 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include<iostream>
 #include<stack>
 #include<vector>
+#include<algorithm>
 
 template <class T>
 class MutantStack : public std::stack<T, std::vector<T> >

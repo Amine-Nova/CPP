@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 12:33:28 by abenmous          #+#    #+#             */
-/*   Updated: 2024/01/20 14:49:29 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/01/24 14:08:51 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,14 @@ class Span
         unsigned int N;
         std::vector<int> List;
     public:
+        typedef std::vector<int>::iterator iter;
         Span();
         Span(unsigned int N);
         Span(const Span &o);
         Span &operator=(const Span &obj);
         void addNumber(int n);
         void addList(int *l, unsigned int range);
-        void manyNumbers(int start, int begin);
+        void manyNumbers(iter start, iter end);
         int longestSpan();
         int shortestSpan();
         ~Span();
