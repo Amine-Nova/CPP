@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 15:51:37 by abenmous          #+#    #+#             */
-/*   Updated: 2024/03/14 16:44:02 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/03/14 19:42:13 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,12 +88,14 @@ void check_valid_num(std::string Year, std::string Month, std::string Day)
     vm >> M;
     vd << Day;
     vd >> D;
-    if (Y < 2009 || Y > 2023)
+    if (Y < 2009 || Y > 2022)
         throw std::invalid_argument("Error: Invalid Year");
     if (M < 1 || M > 12)
         throw std::invalid_argument("Error: Invalid Month");
     if (D < 1 || D > 31)
         throw std::invalid_argument("Error: Invalid Day");
+    if (Y == 2009 && M == 1 && D == 1)
+        throw std::invalid_argument("Error: Invalid Date");
 }
 void check_date(std::string date, std::string str)
 {
@@ -138,7 +140,7 @@ int main(int ac, char **av)
     if (ac == 2)
     {
         std::ifstream File("data.csv"), In(av[1]);
-        std::map<std::string, float> data, info;
+        std::map<std::string, float> data;
         std::map<std::string, float>::iterator iter;
         std::string str, date, value;
         float fv;
@@ -151,9 +153,16 @@ int main(int ac, char **av)
                 data[str.substr(0, v)] =  get_value(str, v);
             }
         }
+        else
+            std::cerr << "can't open file data.csv\n";
         if (In.is_open())
         {
             getline(In, str);
+            if (str != "date | value")
+            {
+                std::cerr << "Error: invalid file => " + str << std::endl;
+                exit(0);
+            }
             while (getline(In, str))
             {
                 try{
@@ -166,27 +175,24 @@ int main(int ac, char **av)
                         check_value(value, str);
                         iter = data.lower_bound(date);
                         fv = get_v(value);
-                        if (isdigit(fv))
-                            throw std::invalid_argument("Error: bad input => " + str);
                         if (fv < 0)
                             throw std::invalid_argument("Error: not a positive number.");
                         if (iter->first == date)
                         {
                             float a = fv * iter->second;
-                            if (a < 0)
+                            if (fv < 0)
                                 throw std::invalid_argument("Error: not a positive number.");
-                            if (a >= INT_MAX)
+                            if (fv > 1000)
                                 throw std::invalid_argument("Error: too large a number.");
                             std::cout << iter->first << " => " << value << " = " << a << std::endl;
                         }
                         else
                         {
-                            iter--
-                            ;                            
+                            iter--;                            
                             float a = fv * iter->second;
-                            if (a < 0)
+                            if (fv < 0)
                                 throw std::invalid_argument("Error: not a positive number.");
-                            if (a >= INT_MAX)
+                            if (fv > 1000)
                                 throw std::invalid_argument("Error: too large a number.");
                             std::cout << iter->first << " => " << value << " = " << a << std::endl;
                         }
@@ -199,6 +205,10 @@ int main(int ac, char **av)
                 }
             }
         }
+        else
+            std::cerr << "can't open file" << std::endl;
     }
+    else
+        std::cerr << "No Enough Arguments" << std::endl;
     return (0);
 }
