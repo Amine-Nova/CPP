@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 15:51:37 by abenmous          #+#    #+#             */
-/*   Updated: 2024/03/14 19:42:13 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/03/16 22:26:39 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -165,7 +165,8 @@ int main(int ac, char **av)
             }
             while (getline(In, str))
             {
-                try{
+                try
+                {
                     ssize_t err = str.find("|");
                     if (err != -1)
                     {
@@ -200,13 +201,14 @@ int main(int ac, char **av)
                     else
                        throw std::invalid_argument("Error: bad input => " + str);
                 }
-                catch(std::exception & e){
+                catch(std::exception & e)
+                {
                     std::cerr << e.what() << std::endl;
                 }
             }
         }
         else
-            std::cerr << "can't open file" << std::endl;
+            std::cerr << "File Not Found " << std::endl;
     }
     else
         std::cerr << "No Enough Arguments" << std::endl;
