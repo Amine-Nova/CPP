@@ -5,26 +5,39 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/15 20:08:41 by abenmous          #+#    #+#             */
-/*   Updated: 2024/03/18 01:18:19 by abenmous         ###   ########.fr       */
+/*   Created: 2024/03/17 19:27:47 by abenmous          #+#    #+#             */
+/*   Updated: 2024/03/18 20:42:57 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"RPN.hpp"
+#include"PmergeMe.hpp"
+
+int check_error(char *av)
+{
+    std::string num = static_cast<std::string>(av);
+    std::cout << av << std::endl;
+    int i = -1;
+    while (av[++i])
+        if(av[i] && !isdigit(av[i]))
+            return(1);
+    if (num.empty())
+        return(1);
+    return(0);
+}
 
 int main(int ac, char **av)
 {
-    if (ac == 2)
+    if (ac <= 1)
+        return (0);
+    int i = 1;
+    std::vector<int> Value;
+    while (av[i])
     {
-        try
+        if (check_error(av[i]))
         {
-            err_check(av[1]);
+            std::cerr << "Error" << std::endl;
+            return (0);
         }
-        catch(std::exception &e)
-        {
-            std::cerr << e.what() << std::endl;
-        }
+        i++;
     }
-    else
-        std::cerr << "Bad Args" << std::endl;
 }

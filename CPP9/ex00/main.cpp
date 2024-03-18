@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 15:51:37 by abenmous          #+#    #+#             */
-/*   Updated: 2024/03/16 22:26:39 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/03/18 01:25:49 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -189,7 +189,7 @@ int main(int ac, char **av)
                         }
                         else
                         {
-                            iter--;                            
+                            iter--;                       
                             float a = fv * iter->second;
                             if (fv < 0)
                                 throw std::invalid_argument("Error: not a positive number.");
