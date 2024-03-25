@@ -2,7 +2,7 @@ NAME = PmergeMe
 
 CC = c++
 
-CFLAGS = -Wall -Werror -Wextra -std=c++98
+CFLAGS = -Wall -Werror -Wextra #-fsanitize=address -g -std=c++98
 
 SRCS = main.cpp PmergeMe.cpp
 
