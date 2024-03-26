@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 19:27:47 by abenmous          #+#    #+#             */
-/*   Updated: 2024/03/25 19:37:37 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/03/25 21:40:01 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,30 +101,54 @@ bool merge_finished(std::vector<std::vector<int> > Elements)
         return true;
     return false;
 }
-void set_vetorofvec(std::vector<int> Value)
+void insert(std::vector<int> Vec)
 {
-    
+    std::vector<std::vector<int> > Elements = vecofvec(Vec);
+    std::vector<std::vector<int> > Main;
+    std::vector<std::vector<int> > Pend;
+    Main.push_back(Elements[0]);
+    Main.push_back(Elements[1]);
+    std::vector<std::vector<int> >::iterator it = Elements.begin();
+    it += 2;
+    while (it != Elements.end())
+    {
+        Pend.push_back(*it);
+        it++;
+        if (it != Elements.end())
+        {
+            Main.push_back(*it);
+            it++;
+        }
+    }
+    // std::vector<std::vector<int> >::iterator iter4 = Elements.begin();
+    // while (iter4 != Elements.end())
+    // {
+    //     std::vector<int>::iterator iter3 = iter4->begin();
+    //     while(iter3 != iter4->end())
+    //     {
+    //         std::cout << "[" << *iter3 << "] ";
+    //         iter3++;
+    //     } 
+    //     std::cout << std::endl;
+    //     iter4++; 
+    // }
+    // std::cout << "=====" << std::endl;
+}
+void set_vetorofvec(std::vector<int> Value)
+{ 
     std::vector<std::vector<int> > Elements = vecofvec(Value);
     swap_vector(Elements);
     std::vector<int> Vec = flatenE_to_value(Elements);
-     std::vector<std::vector<int> >::iterator iter4 = Elements.begin();
-     while (iter4 != Elements.end())
-     {
-         std::vector<int>::iterator iter3 = iter4->begin();
-         while(iter3 != iter4->end())
-         {
-             std::cout << "[ "<< *iter3 << " ]";
-             iter3++;
-         } 
-         std::cout << std::endl;
-         iter4++; 
-     }
+        for (int i = 0; i < Vec.size();++i)
+        std::cout << Vec[i] << std::endl;
+    std::cout << "=======" << std::endl;
     if (merge_finished(Elements))
     {
         se *= 2;
         set_vetorofvec(Vec);
     }
-    // insert();
+    insert(Vec);
+    se /= 2;
     // set_couples(Elements);
 }
 
@@ -148,5 +172,4 @@ int main(int ac, char **av)
         i++;
     }
     set_vetorofvec(Value);
-    
 }
