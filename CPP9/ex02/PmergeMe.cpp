@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 19:28:02 by abenmous          #+#    #+#             */
-/*   Updated: 2024/03/31 22:59:54 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/04/01 01:06:48 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void swap_vector(std::vector<std::vector<int> > &Elements)
         iter += 2;
     }
 }
-std::vector<int> flatenE_to_value(std::vector<std::vector<int> > Elements)
+std::vector<int> back_vec(std::vector<std::vector<int> > Elements)
 {
     std::vector<std::vector<int> >::iterator iter = Elements.begin();
     std::vector<int> ret;
@@ -90,7 +90,7 @@ bool find_pos(const std::vector<int> &Main, const std::vector<int> &InsertElemen
         return (true);
     return (false);
 }
-void insert(std::vector<int> &Vec)
+void insert_v(std::vector<int> &Vec)
 {
     std::vector<std::vector<int> > Elements = vecofvec(Vec);
     std::vector<int> chayt;
@@ -135,7 +135,7 @@ void insert(std::vector<int> &Vec)
         chayt.clear();
     }
     Vec.clear();
-    Vec = flatenE_to_value(Main);
+    Vec = back_vec(Main);
     se /= 2;    
 }
 
@@ -144,13 +144,13 @@ void set_vetorofvec(std::vector<int> &Value)
     std::vector<std::vector<int> > Elements = vecofvec(Value);
     swap_vector(Elements);
     Value.clear();
-    Value = flatenE_to_value(Elements);
+    Value = back_vec(Elements);
     if (merge_finished(Elements))
     {
         se *= 2;
         set_vetorofvec(Value);
     }
-    insert(Value);
+    insert_v(Value);
 }
 
 void vec_function(char **av)
