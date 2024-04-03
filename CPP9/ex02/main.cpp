@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 19:27:47 by abenmous          #+#    #+#             */
-/*   Updated: 2024/04/01 18:03:05 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/04/01 22:22:13 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ void print_deofde(std::deque<std::deque<int> > Elements)
         std::cout << std::endl;
         iter++;
     }
-    
 }
 
 std::deque<std::deque<int> > deofde(std::deque<int> &Value)
@@ -153,10 +152,6 @@ void set_dequeof(std::deque<int> &Value)
     }
     insert_d(Value);
 }
-void printf_ba (char **av, std::deque<int> Value)
-{
-    
-}
 void    deque_function(char **av)
 {
     std::deque<int> Value;
@@ -202,14 +197,20 @@ int main(int ac, char **av)
         }
         i++;
     }
-    clock_t start, end;
-    float res;
-    start = clock();
+    clock_t vstart;
+    float vres;
+    vstart = clock();
+    std::cout << "Before: ";
+    for (int i = 1; av[i]; ++i)
+        std::cout << av[i] << " ";
+    std::cout << std::endl;
     vec_function(av);
-    res = clock() - start;
-    std::cout << "Time to process a range of 5 elements with std::vector : " << std::fixed << std::setprecision(5) << res / CLOCKS_PER_SEC << std::endl;
-    start = clock();
+    vres = clock() - vstart;
+    std::cout << "Time to process a range of 5 elements with std::vector : " << std::fixed << std::setprecision(5) << vres / CLOCKS_PER_SEC << std::endl;
+    clock_t dstart;
+    float dres;
+    dstart = clock();
     deque_function(av);
-    res = clock() - start;
-    std::cout << "Time to process a range of 5 elements with std::deque : " << std::fixed << std::setprecision(5) << res / CLOCKS_PER_SEC << std::endl;
+    dres = clock() - dstart;
+    std::cout << "Time to process a range of 5 elements with std::deque : " << std::fixed << std::setprecision(5) << dres / CLOCKS_PER_SEC << std::endl;
 }

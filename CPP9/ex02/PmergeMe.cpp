@@ -6,14 +6,13 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 19:28:02 by abenmous          #+#    #+#             */
-/*   Updated: 2024/04/01 01:06:48 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/04/02 19:55:45 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"PmergeMe.hpp"
 
 int se = 1;
-
 void printVECTOR(std::vector<std::vector<int> > Elements){
     
     std::vector<std::vector<int> >::iterator iter4 = Elements.begin();
@@ -166,13 +165,8 @@ void vec_function(char **av)
         i++;
     }
     set_vetorofvec(Value);
-    std::cout << "Before: ";
-    for (int i = 1; av[i]; ++i)
-        std::cout << av[i] << " ";
-    std::cout << std::endl;
     std::cout << "After:  ";
     for (int i = 0; i < Value.size();++i)
         std::cout << Value[i] << " ";
     std::cout << std::endl;
-    
 }

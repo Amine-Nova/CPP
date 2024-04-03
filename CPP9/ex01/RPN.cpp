@@ -6,7 +6,7 @@
 /*   By: abenmous <abenmous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 16:33:35 by abenmous          #+#    #+#             */
-/*   Updated: 2024/03/18 01:36:23 by abenmous         ###   ########.fr       */
+/*   Updated: 2024/04/02 19:58:39 by abenmous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 int count_value(int f, int s, char c)
 {
     if (c == '/')
+    {
+        if (f == 0)
+            throw std::logic_error("Error");
         return (s / f);
+    }
     else if (c == '+')
         return (s + f);
     else if (c == '-')
